@@ -1,0 +1,10 @@
+# Herdr runtime state
+*.log*
+*.sock
+.plugins.lock
+plugins.json
+session*.json
+sessions/
+
+# Herdr-managed plugin checkouts
+plugins/github/

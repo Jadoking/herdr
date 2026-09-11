@@ -1,0 +1,12 @@
+# Intentionally narrow: only low-risk interactive tools are relaunched.
+# Agents are restored separately through Herdr integrations.
+nvim
+vim
+vi
+less
+more
+tail
+bat
+btop
+htop
+lazygit
