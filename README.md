@@ -11,6 +11,8 @@ Install [Herdr](https://herdr.dev/docs/install/), then clone this repository:
 git clone <repository-url> "${XDG_CONFIG_HOME:-$HOME/.config}/herdr"
 ```
 
+Install Go 1.24 or newer; `herdr-auto-title` builds locally during installation.
+
 Install the pinned plugins and the integrations used by this config:
 
 ```sh
