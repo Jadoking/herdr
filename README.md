@@ -24,6 +24,21 @@ for integration in pi claude codex opencode hermes; do
 done
 ```
 
+On Linux with systemd, start the default Herdr session automatically:
+
+```sh
+mkdir -p ~/.config/systemd/user
+ln -sf ~/.config/herdr/systemd/herdr.service ~/.config/systemd/user/herdr.service
+systemctl --user daemon-reload
+systemctl --user enable herdr.service
+```
+
+Enable user lingering if the server should start at boot before login:
+
+```sh
+loginctl enable-linger "$USER"
+```
+
 Manage plugins by adding or updating pinned `herdr plugin install` commands in
 `install-plugins.sh`, then rerun it. Do not commit `plugins.json` or
 `plugins/github/`; HerdR generates and manages them for the current machine.
