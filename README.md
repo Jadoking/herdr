@@ -11,16 +11,21 @@ Install [Herdr](https://herdr.dev/docs/install/), then clone this repository:
 git clone <repository-url> "${XDG_CONFIG_HOME:-$HOME/.config}/herdr"
 ```
 
-Reinstall the pinned workflow plugin and the integrations used by this config:
+Install the pinned plugins and the integrations used by this config:
 
 ```sh
-herdr plugin install ntindle/herdr-resurrect \
-  --ref 5afa6755d4f35c62c7522ba4fd04922d1ac69602 --yes
+./install-plugins.sh
 
 for integration in pi claude codex opencode hermes; do
   herdr integration install "$integration"
 done
 ```
+
+Manage plugins by adding or updating pinned `herdr plugin install` commands in
+`install-plugins.sh`, then rerun it. Do not commit `plugins.json` or
+`plugins/github/`; HerdR generates and manages them for the current machine.
+To remove one, run `herdr plugin uninstall <plugin-id>` and delete its install
+line.
 
 The `ctrl+h/j/k/l` bindings also require
 [`vim-herdr-navigator`](https://github.com/AVGVSTVS96/vim-herdr-navigator).
