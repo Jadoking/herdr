@@ -8,7 +8,8 @@ and Herdr-managed plugin checkouts are intentionally ignored.
 Install [Herdr](https://herdr.dev/docs/install/), then clone this repository:
 
 ```sh
-git clone <repository-url> "${XDG_CONFIG_HOME:-$HOME/.config}/herdr"
+git clone https://github.com/Jadoking/herdr-config.git \
+  "${XDG_CONFIG_HOME:-$HOME/.config}/herdr"
 ```
 
 Install Go 1.24 or newer; `herdr-auto-title` builds locally during installation.
