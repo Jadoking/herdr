@@ -8,7 +8,7 @@ and Herdr-managed plugin checkouts are intentionally ignored.
 Install [Herdr](https://herdr.dev/docs/install/), then clone this repository:
 
 ```sh
-git clone https://github.com/Jadoking/herdr-config.git \
+git clone https://github.com/Jadoking/herdr.git \
   "${XDG_CONFIG_HOME:-$HOME/.config}/herdr"
 ```
 
