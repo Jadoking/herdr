@@ -45,6 +45,31 @@ Manage plugins by adding or updating pinned `herdr plugin install` commands in
 To remove one, run `herdr plugin uninstall <plugin-id>` and delete its install
 line.
 
+## Pet
+
+`herdr-pet` is pinned in `install-plugins.sh`; its portable settings select
+Dewey. Pet artwork stays outside this repository. On a new machine, fetch the
+personal-use asset from Codex's CDN:
+
+```sh
+mkdir -p ~/.codex/pets/dewey
+curl -fL -o ~/.codex/pets/dewey/spritesheet.webp \
+  https://persistent.oaistatic.com/codex/pets/v1/dewey-spritesheet-v4.webp
+printf '{"id":"dewey"}\n' > ~/.codex/pets/dewey/pet.json
+herdr-pet use dewey
+herdr server reload-config
+```
+
+Use a Kitty-graphics-capable terminal such as Ghostty, kitty, or WezTerm.
+Detach and reattach existing clients if the pet does not appear after enabling
+`experimental.kitty_graphics`.
+
+- `prefix+shift+p`: show or hide the pet.
+- `prefix+shift+o`: pet settings and selection.
+- `herdr-pet status`: daemon, selected pet, and log location.
+- On macOS, control-option-drag moves it. Grant the terminal Accessibility
+  permission if prompted; other plugin functionality does not require dragging.
+
 The `ctrl+h/j/k/l` bindings also require
 [`vim-herdr-navigator`](https://github.com/AVGVSTVS96/vim-herdr-navigator).
 

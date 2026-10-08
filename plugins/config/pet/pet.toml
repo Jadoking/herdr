@@ -1,0 +1,11 @@
+# herdr-pet settings. Edited by the settings popover / CLI (applied live);
+# hand edits take effect on `herdr-pet restart`.
+enabled = true
+pet = "dewey"
+mode = "all"
+size = 6
+transitions = true
+speed = 1.0
+quantize = true
+drag = "control+option"
+warm_panes = 4

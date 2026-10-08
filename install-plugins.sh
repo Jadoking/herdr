@@ -11,3 +11,7 @@ herdr plugin install kryptamine/herdr-auto-title \
 # v0.36.2
 herdr plugin install persiyanov/herdr-reviewr \
   --ref 4c090225af706bf3aaa24b39fea890a72994f40f --yes
+
+# v0.1.2; downloads the checksum-verified platform binary.
+herdr plugin install nikok6/herdr-pet \
+  --ref 8d84eca7b6405473326dce9671d64ed57c6e7c70 --yes
