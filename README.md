@@ -67,8 +67,10 @@ Detach and reattach existing clients if the pet does not appear after enabling
 - `prefix+shift+p`: show or hide the pet.
 - `prefix+shift+o`: pet settings and selection.
 - `herdr-pet status`: daemon, selected pet, and log location.
-- On macOS, control-option-drag moves it. Grant the terminal Accessibility
-  permission if prompted; other plugin functionality does not require dragging.
+- Use the settings panel's **Position…** control to move it.
+- Desktop dragging is disabled: v0.1.2 intercepts matching mouse actions across
+  all macOS apps, not just over the pet. Animations do not need Accessibility
+  permission. Enable dragging only if you deliberately want that behavior.
 
 The `ctrl+h/j/k/l` bindings also require
 [`vim-herdr-navigator`](https://github.com/AVGVSTVS96/vim-herdr-navigator).
